@@ -1,0 +1,1 @@
+A machine learning-powered sentiment analysis web app built with Streamlit and TextBlob. Analyze individual text or bulk CSV files to extract sentiment polarity and subjectivity scores with real-time classification.
