@@ -31,8 +31,9 @@ with st.expander('Analyze CSV'):
 
 
     if upl:
-        df = pd.read_excel(upl)
-        del df['Unnamed: 0']
+        df = pd.read_csv(upl)
+        if 'Unnamed: 0' in df.columns:
+            del df['Unnamed: 0']
         df['score'] = df['tweets'].apply(score)
         df['analysis'] = df['score'].apply(analyze)
         st.write(df.head(10))
